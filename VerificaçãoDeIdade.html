@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="idade">Digite sua idade:</label>
+    <input type="number" id="idade" name="idade">
+    <button onclick="verificarIdade()">Verificar</button>
+
+    <p id="resultado"></p>
+    
+    <ul id="lista"></ul>
+
+    <script>
+        function verificarIdade() {
+            var idade = document.getElementById("idade").value;
+            var resultado = document.getElementById("resultado");
+            if (idade >= 18 && idade < 120) {
+                resultado.textContent = "CARTEIRA DE TRABALHO TE ESPERA.";
+            } else if (idade == 666) {
+                resultado.textContent = "BUUUUGGAAAAHHHH WOOOOOGAAAAAHH.";
+            } else if (idade < 18 && idade >= 12) {
+                resultado.textContent = "Ainda não, filho.";
+            } else if (idade < 12 && idade >= 1) {
+                resultado.textContent = "Lei Felca ta de olho.";
+            } else if (idade >= 120) {
+                resultado.textContent = "tutancamon?";
+            } else {
+                resultado.textContent = "O teclado quebrou? Pobre.";
+                alert("Idade inválida. Por favor, insira um número entre 1 e 120.");
+            } return;
+        }
+        
+        function adicionarIdade() {
+            var idade = document.getElementById("idade").value;
+            var item = document.createElement("li");
+            item.textContent = idade;
+            document.getElementById("lista").appendChild(item);
+            document.getElementById("idade").value = "";
+        }
+    </script>
+
+</body>
+</html>
