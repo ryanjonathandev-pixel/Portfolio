@@ -40,10 +40,11 @@ atualizar();
 function atualizarJ(){
 
     const agora = new Date();
+    const horaJapao = new Date(agora.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
 
-    let h = agora.getHours();
-    let m = agora.getMinutes();
-    let s = agora.getSeconds();
+    let h = horaJapao.getHours();
+    let m = horaJapao.getMinutes();
+    let s = horaJapao.getSeconds();
 
     if (h < 10){
         h = "0" + h;

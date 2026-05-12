@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'MinhaFonte';
+  src:
+       url('VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'MinhaFonte', monospace;
+}
+
+#relogio, #relogioJ {
+  font-family: 'MinhaFonte', monospace;
+  font-size: 48px;
+  color: #00FF00;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
