@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista com Split</title>
+</head>
+<body>
+
+  <button onclick="mostrarLista()">Mostrar Lista</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+
+    // constante já definida
+    const dados = "Alice-22,Fen-31,Agetha-19";
+
+    // split já realizado fora da função
+    const pessoas = dados.split(",");
+
+    function mostrarLista() {
+
+      const ul = document.getElementById("lista");
+
+      ul.innerHTML = "";
+
+      for (let i = 0; i < pessoas.length; i++) {
+
+        const info = pessoas[i].split("-");
+
+        const nome = info[0];
+        const idade = info[1];
+
+        const li = document.createElement("li");
+
+        li.textContent = `${nome} tem ${idade} anos`;
+
+        ul.appendChild(li);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
