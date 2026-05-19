@@ -6,40 +6,10 @@
 </head>
 <body>
 
-  <button onclick="mostrarLista()">Mostrar Lista</button>
+  <button onclick="add()">Mostrar Lista</button>
+  <button onclick="analisar()">Analisar</button>
 
   <ul id="lista"></ul>
-
-  <script>
-
-    // constante já definida
-    const dados = "Alice-22,Fen-31,Agetha-19";
-
-    // split já realizado fora da função
-    const pessoas = dados.split(",");
-
-    function mostrarLista() {
-
-      const ul = document.getElementById("lista");
-
-      ul.innerHTML = "";
-
-      for (let i = 0; i < pessoas.length; i++) {
-
-        const info = pessoas[i].split("-");
-
-        const nome = info[0];
-        const idade = info[1];
-
-        const li = document.createElement("li");
-
-        li.textContent = `${nome} tem ${idade} anos`;
-
-        ul.appendChild(li);
-      }
-    }
-
-  </script>
-
+  <script src="agetha.js"></script>
 </body>
 </html>
